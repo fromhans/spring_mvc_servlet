@@ -10,6 +10,7 @@ import java.io.IOException;
 @WebServlet(name="helloServlet", urlPatterns="/hello")
 public class HelloServlet extends HttpServlet {
 
+    /*HTTP 요청을 통해 매핑된 URL이 호출되면 서블릿 컨테이너는 다음 메서드를 실행한다.*/
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //super.service(req, resp);
