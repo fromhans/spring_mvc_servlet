@@ -30,13 +30,11 @@ public class ControllerV4HandlerAdapter implements study.servlet.web.frontcontro
         mv.setModel(model);
         return mv;
     }
+
     private Map<String, String> createParamMap(HttpServletRequest request) {
         Map<String, String> paramMap = new HashMap<>();
         request.getParameterNames().asIterator()
-                .forEachRemaining(paramName->paramMap.put(paramName, request.getParameter(paramName)));
+                .forEachRemaining(paramName -> paramMap.put(paramName, request.getParameter(paramName)));
         return paramMap;
-    }
-    private MyView viewResolver(String viewName) {
-        return new MyView("/WEB-INF/views/" + viewName + ".jsp");
     }
 }
